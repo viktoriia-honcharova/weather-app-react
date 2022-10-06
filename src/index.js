@@ -5,6 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.css";
 import "./styles.css";
 import Form from "./Form";
+import Current from "./Current";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,6 +15,7 @@ root.render(
         <div className="main-content col-sm-8">
           <div className="content-top">
             <Form />
+            <Current />
           </div>
           <div className="content-bottom">
             <div className="row bottom-row"></div>
