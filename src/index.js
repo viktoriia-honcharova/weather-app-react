@@ -35,6 +35,16 @@ root.render(
           <Prediction />
         </div>
       </div>
+      <div class="open-source">
+        <a
+          href="https://github.com/viktoriia-honcharova/weather-app-react"
+          target="_blank"
+          class="open-source-link"
+        >
+          Open-source code
+        </a>{" "}
+        by Viktoriia Honcharova
+      </div>
     </div>
   </React.StrictMode>
 );
