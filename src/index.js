@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./styles.css";
 import Form from "./Form";
 import Current from "./Current";
+import Humidity from "./Humidity";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -18,7 +19,9 @@ root.render(
             <Current />
           </div>
           <div className="content-bottom">
-            <div className="row bottom-row"></div>
+            <div className="row bottom-row">
+              <Humidity />
+            </div>
           </div>
         </div>
         <div className="prediction col-sm-4" id="forecast"></div>
