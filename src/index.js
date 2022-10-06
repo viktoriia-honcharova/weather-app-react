@@ -7,6 +7,7 @@ import "./styles.css";
 import Form from "./Form";
 import Current from "./Current";
 import Humidity from "./Humidity";
+import Wind from "./Wind";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -21,6 +22,7 @@ root.render(
           <div className="content-bottom">
             <div className="row bottom-row">
               <Humidity />
+              <Wind />
             </div>
           </div>
         </div>
