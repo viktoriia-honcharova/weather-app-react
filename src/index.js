@@ -39,6 +39,7 @@ root.render(
         <a
           href="https://github.com/viktoriia-honcharova/weather-app-react"
           target="_blank"
+          rel="noreferrer"
           className="open-source-link"
         >
           Open-source code
