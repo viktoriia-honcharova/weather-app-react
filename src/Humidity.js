@@ -1,3 +1,4 @@
+import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./styles.css";
 import HumidityIcon from "./img/humidity.svg";

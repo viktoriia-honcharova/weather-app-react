@@ -8,6 +8,7 @@ import Form from "./Form";
 import Current from "./Current";
 import Humidity from "./Humidity";
 import Wind from "./Wind";
+import Prediction from "./Prediction";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -26,7 +27,13 @@ root.render(
             </div>
           </div>
         </div>
-        <div className="prediction col-sm-4" id="forecast"></div>
+        <div className="prediction col-sm-4" id="forecast">
+          <Prediction />
+          <Prediction />
+          <Prediction />
+          <Prediction />
+          <Prediction />
+        </div>
       </div>
     </div>
   </React.StrictMode>
