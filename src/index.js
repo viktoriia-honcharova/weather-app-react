@@ -6,12 +6,11 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./styles.css";
 import Weather from "./Weather";
 
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <div className="container main">
-      <Weather />
+      <Weather defaultCity="Kyiv" />
       <div className="open-source">
         <a
           href="https://github.com/viktoriia-honcharova/weather-app-react"
