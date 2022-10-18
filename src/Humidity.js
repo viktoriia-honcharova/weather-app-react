@@ -8,7 +8,7 @@ export default function Humidity() {
     <div className="weather-indicators col-sm-6">
       <div className="row">
         <div className="col-sm-6">
-          <img src={HumidityIcon} alt="" class="indicators-img" />
+          <img src={HumidityIcon} alt="" className="indicators-img" />
         </div>
         <div className="col-sm-6">
           <p className="indicators-title">Humidity</p>

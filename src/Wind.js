@@ -8,7 +8,7 @@ export default function Wind() {
     <div className="weather-indicators col-sm-6">
       <div className="row">
         <div className="col-sm-6">
-          <img src={WindIcon} alt="" class="indicators-img" />
+          <img src={WindIcon} alt="" className="indicators-img" />
         </div>
         <div className="col-sm-6">
           <p className="indicators-title">Wind</p>

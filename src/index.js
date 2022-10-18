@@ -4,37 +4,14 @@ import reportWebVitals from "./reportWebVitals";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "./styles.css";
-import Form from "./Form";
-import Current from "./Current";
-import Humidity from "./Humidity";
-import Wind from "./Wind";
-import Prediction from "./Prediction";
+import Weather from "./Weather";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <div className="container main">
-      <div className="row">
-        <div className="main-content col-sm-8">
-          <div className="content-top">
-            <Form />
-            <Current />
-          </div>
-          <div className="content-bottom">
-            <div className="row bottom-row">
-              <Humidity />
-              <Wind />
-            </div>
-          </div>
-        </div>
-        <div className="prediction col-sm-4" id="forecast">
-          <Prediction />
-          <Prediction />
-          <Prediction />
-          <Prediction />
-          <Prediction />
-        </div>
-      </div>
+      <Weather />
       <div className="open-source">
         <a
           href="https://github.com/viktoriia-honcharova/weather-app-react"
