@@ -18,7 +18,9 @@ export default function Prediction(props) {
       <div>
         {forecast.map(function (dailyForecast, index) {
           if (index < 5) {
-            return <WeatherForecatsDay value={forecast[index]} key={index} />;
+            return <WeatherForecatsDay value={dailyForecast} key={index} />;
+          } else {
+            return null;
           }
         })}
       </div>
