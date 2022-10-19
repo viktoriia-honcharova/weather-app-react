@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./styles.css";
 import WindIcon from "./img/wind.svg";
 
-export default function Wind() {
+export default function Wind(props) {
   return (
     <div className="weather-indicators col-sm-6">
       <div className="row">
@@ -13,7 +13,7 @@ export default function Wind() {
         <div className="col-sm-6">
           <p className="indicators-title">Wind</p>
           <p className="indicators-walue">
-            <span id="humidity">2</span>km/h
+            <span id="humidity">{props.value}</span>km/h
           </p>
         </div>
       </div>

@@ -73,8 +73,8 @@ export default function Weather(props) {
             </div>
             <div className="content-bottom">
               <div className="row bottom-row">
-                <Humidity />
-                <Wind />
+                <Humidity value={weatherData.humidity} />
+                <Wind value={weatherData.wind} />
               </div>
             </div>
           </div>

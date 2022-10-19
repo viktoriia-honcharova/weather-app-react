@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./styles.css";
 import HumidityIcon from "./img/humidity.svg";
 
-export default function Humidity() {
+export default function Humidity(props) {
   return (
     <div className="weather-indicators col-sm-6">
       <div className="row">
@@ -13,7 +13,7 @@ export default function Humidity() {
         <div className="col-sm-6">
           <p className="indicators-title">Humidity</p>
           <p className="indicators-walue">
-            <span id="humidity">95</span>%
+            <span id="humidity">{props.value}</span>%
           </p>
         </div>
       </div>
