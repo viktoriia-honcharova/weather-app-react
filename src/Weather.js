@@ -2,13 +2,9 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./styles.css";
 import axios from "axios";
-import Main from "./img/main-photo.JPEG";
 
 import Current from "./Current";
-import Humidity from "./Humidity";
-import Wind from "./Wind";
 import Prediction from "./Prediction";
-import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -53,33 +49,7 @@ export default function Weather(props) {
                   <span>📍</span>
                 </button>
               </form>
-              <section className="weather-img">
-                <img src={Main} alt="" className="background" />
-                <div className="weather-data">
-                  <h2 className="city-name" id="city-name">
-                    {weatherData.city}
-                  </h2>
-                  <p className="day-time">
-                    <FormattedDate value={weatherData.date} />
-                  </p>
-                  <img
-                    src={weatherData.iconUrl}
-                    alt={weatherData.iconDesc}
-                    className="main-weather"
-                    id="currennt-weather-icon"
-                  />
-                  <h1 className="current-temp">
-                    <span id="current-temp">{weatherData.temperature}</span>
-                    <span className="degree-singht"> °C</span>
-                  </h1>
-                </div>
-              </section>
-            </div>
-            <div className="content-bottom">
-              <div className="row bottom-row">
-                <Humidity value={weatherData.humidity} />
-                <Wind value={weatherData.wind} />
-              </div>
+              <Current data={weatherData} />
             </div>
           </div>
           <div className="prediction col-sm-4" id="forecast">
