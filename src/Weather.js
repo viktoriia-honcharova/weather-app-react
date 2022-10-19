@@ -8,6 +8,7 @@ import Current from "./Current";
 import Humidity from "./Humidity";
 import Wind from "./Wind";
 import Prediction from "./Prediction";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -22,6 +23,7 @@ export default function Weather(props) {
       humidity: response.data.temperature.humidity,
       iconUrl: response.data.condition.icon_url,
       iconDesc: response.data.condition.description,
+      date: new Date(response.data.time * 1000),
     });
   }
 
@@ -57,7 +59,9 @@ export default function Weather(props) {
                   <h2 className="city-name" id="city-name">
                     {weatherData.city}
                   </h2>
-                  <p className="day-time">Friday, 21:00</p>
+                  <p className="day-time">
+                    <FormattedDate value={weatherData.date} />
+                  </p>
                   <img
                     src={weatherData.iconUrl}
                     alt={weatherData.iconDesc}
