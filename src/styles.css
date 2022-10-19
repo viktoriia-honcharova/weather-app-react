@@ -23,7 +23,7 @@ body {
 
 .input {
   padding-left: 15px;
-  width: 350px;
+  width: 395px;
   margin-right: 10px;
   border: 2px solid #ffffff;
 }
@@ -32,8 +32,7 @@ body {
   outline: none;
 }
 
-.search-button,
-.current-location {
+.search-button {
   border-radius: 20px;
   padding: 0 20px 0;
   margin: 0;
@@ -42,14 +41,7 @@ body {
   color: #ffffff;
 }
 
-.current-location {
-  padding: 0 10px 0;
-  margin-left: 5px;
-  height: 34px;
-}
-
-.search-button:hover,
-.current-location:hover {
+.search-button:hover {
   border: 2px solid #495464;
   background: #495464;
 }
