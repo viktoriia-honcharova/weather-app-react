@@ -70,11 +70,7 @@ export default function Weather(props) {
             </div>
           </div>
           <div className="prediction col-sm-4" id="forecast">
-            <Prediction />
-            <Prediction />
-            <Prediction />
-            <Prediction />
-            <Prediction />
+            <Prediction value={weatherData.city} />
           </div>
         </div>
       </div>

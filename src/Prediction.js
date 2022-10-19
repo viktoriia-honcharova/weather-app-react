@@ -1,24 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./styles.css";
+import axios from "axios";
+import WeatherForecatsDay from "./WeatherForecastDay";
 
-export default function Prediction() {
-  return (
-    <div className="row days">
-      <div className="col-sm-7">
-        <p className="day-title">Saturday</p>
-        <p className="day-value">17 October</p>
+export default function Prediction(props) {
+  let [loaded, setLoaded] = useState(false);
+  let [forecast, setForecast] = useState(null);
+
+  function handleResponse(response) {
+    setForecast(response.data.daily);
+    setLoaded(true);
+  }
+
+  if (loaded) {
+    return (
+      <div>
+        {forecast.map(function (dailyForecast, index) {
+          if (index < 5) {
+            return <WeatherForecatsDay value={forecast[index]} key={index} />;
+          }
+        })}
       </div>
-      <div className="col-sm-5">
-        <img
-          src="http://openweathermap.org/img/wn/10d@2x.png"
-          alt=""
-          className="prediction-img"
-        />
-        <p className="prediction-temp">
-          11° <span className="temp-night"> 18°</span>
-        </p>
-      </div>
-    </div>
-  );
+    );
+  } else {
+    const apiKey = "474ot518db9444a6f4583f30efc00512";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${props.value}&key=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+
+    return null;
+  }
 }
