@@ -14,27 +14,27 @@ export default function Current(props) {
         <img src={Main} alt="" className="background" />
         <div className="weather-data">
           <h2 className="city-name" id="city-name">
-            {props.city}
+            {props.data.city}
           </h2>
           <p className="day-time">
-            <FormattedDate value={props.date} />
+            <FormattedDate value={props.data.date} />
           </p>
           <img
-            src={props.iconUrl}
-            alt={props.iconDesc}
+            src={props.data.iconUrl}
+            alt={props.data.iconDesc}
             className="main-weather"
             id="currennt-weather-icon"
           />
           <h1 className="current-temp">
-            <span id="current-temp">{props.temperature}</span>
+            <span id="current-temp">{props.data.temperature}</span>
             <span className="degree-singht"> °C</span>
           </h1>
         </div>
       </section>
       <div className="content-bottom">
         <div className="row bottom-row">
-          <Humidity value={props.humidity} />
-          <Wind value={props.wind} />
+          <Humidity value={props.data.humidity} />
+          <Wind value={props.data.wind} />
         </div>
       </div>
     </div>
