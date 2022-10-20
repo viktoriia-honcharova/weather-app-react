@@ -38,6 +38,7 @@ export default function WeatherForecatsDay(props) {
       "July",
       "August",
       "September",
+      "October",
       "November",
       "December",
     ];
